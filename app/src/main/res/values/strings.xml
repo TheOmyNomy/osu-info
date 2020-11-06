@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">osu!info</string>
+
+    <!-- Setup -->
+
+    <string name="setup_welcome">Welcome to osu!info!</string>
+
+    <string name="setup_key">Let\'s start by fetching your osu! API key by clicking the button below and pasting it in the text field below that.</string>
+    <string name="setup_key_button">Get osu! API key</string>
+    <string name="setup_key_hint">osu! API Key</string>
+
+    <string name="setup_username">Now we need a user to fetch information, so enter your (or someone else\'s) username below.</string>
+
+    <string name="setup_complete">That\'s it! Enjoy osu!info!</string>
+
+    <!-- Home -->
+
+    <string name="home">Home</string>
+
+    <string name="avatar">Avatar</string>
+    <string name="best_performance">Best Performance</string>
+
+    <string name="grade">Grade</string>
+
+    <string name="accuracy">Accuracy</string>
+    <string name="performance">Performance</string>
+    <string name="combo">Combo</string>
+
+    <string name="_300s">300\'s</string>
+    <string name="_100s">100\'s</string>
+    <string name="_50s">50\'s</string>
+    <string name="_misses">Misses</string>
+
+    <string name="beatmap_cover">Beatmap cover</string>
+
+    <string name="api_fetch_failed">API request failed! Please try again.</string>
+
+    <!-- Settings -->
+
+    <string name="settings">Settings</string>
+
+    <string name="account">Account</string>
+
+    <string name="username_description">(Required) The user\'s name for fetching data</string>
+    <string name="username">Username</string>
+
+    <string name="key_description">(Required) Your osu! account\'s API key</string>
+    <string name="key">API Key</string>
+
+    <string name="invalid_username">Invalid username! Please try again.</string>
+    <string name="invalid_key">Invalid API key! Please try again.</string>
+
+    <string name="success">Success!</string>
+
+    <string name="retry">Retry</string>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/scoreMiniGradeImageView"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/grade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <TextView
+        android:id="@+id/scoreMiniBeatmapTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreMiniGradeImageView"
+        app:layout_constraintTop_toTopOf="@+id/scoreMiniGradeImageView" />
+
+    <TextView
+        android:id="@+id/scoreMiniInformationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/scoreMiniBeatmapTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreMiniBeatmapTextView" />
+
+    <TextView
+        android:id="@+id/scoreMiniDifficultyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreMiniGradeImageView"
+        app:layout_constraintStart_toStartOf="@+id/scoreMiniGradeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreMiniGradeImageView" />
+
+    <TextView
+        android:id="@+id/scoreMiniDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scoreMiniBeatmapTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreMiniInformationTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

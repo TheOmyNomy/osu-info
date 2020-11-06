@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoreActivity">
+
+    <ImageView
+        android:id="@+id/scoreAvatarImageView"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <TextView
+        android:id="@+id/scoreUsernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreAvatarImageView"
+        app:layout_constraintStart_toStartOf="@+id/scoreAvatarImageView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreAvatarImageView" />
+
+    <ImageView
+        android:id="@+id/scoreGradeImageView"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/grade"
+        app:layout_constraintEnd_toEndOf="@+id/scoreUsernameTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreUsernameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreUsernameTextView"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <TextView
+        android:id="@+id/scoreScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreGradeImageView"
+        app:layout_constraintStart_toStartOf="@+id/scoreGradeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreGradeImageView" />
+
+    <TextView
+        android:id="@+id/scoreModsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreScoreTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreScoreTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreScoreTextView" />
+
+    <TextView
+        android:id="@+id/scoreDisplayAccuracyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accuracy"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/scoreDisplayPerformanceTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scoreDisplayPerformanceTextView" />
+
+    <TextView
+        android:id="@+id/scoreDisplayPerformanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/performance"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/scoreModsTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/scoreModsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreModsTextView" />
+
+    <TextView
+        android:id="@+id/scoreDisplayComboTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/combo"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreDisplayPerformanceTextView"
+        app:layout_constraintTop_toTopOf="@+id/scoreDisplayPerformanceTextView" />
+
+    <TextView
+        android:id="@+id/scoreAccuracyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplayAccuracyTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplayAccuracyTextView"
+        app:layout_constraintTop_toTopOf="@+id/scorePerformanceTextView" />
+
+    <TextView
+        android:id="@+id/scorePerformanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplayPerformanceTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplayPerformanceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreDisplayPerformanceTextView" />
+
+    <TextView
+        android:id="@+id/scoreComboTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplayComboTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplayComboTextView"
+        app:layout_constraintTop_toTopOf="@+id/scorePerformanceTextView" />
+
+    <TextView
+        android:id="@+id/scoreDisplay300TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_300s"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplayAccuracyTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplayAccuracyTextView"
+        app:layout_constraintTop_toTopOf="@+id/scoreDisplay100TextView" />
+
+    <TextView
+        android:id="@+id/scoreDisplay100TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="@string/_100s"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/scoreDisplay300TextView"
+        app:layout_constraintTop_toTopOf="@+id/scoreDisplay50TextView" />
+
+    <TextView
+        android:id="@+id/scoreDisplay50TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="@string/_50s"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/scoreDisplayMissesTextView"
+        app:layout_constraintTop_toTopOf="@+id/scoreDisplayMissesTextView" />
+
+    <TextView
+        android:id="@+id/scoreDisplayMissesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/_misses"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplayComboTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplayComboTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreComboTextView" />
+
+    <TextView
+        android:id="@+id/score300TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplay300TextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplay300TextView"
+        app:layout_constraintTop_toTopOf="@+id/score100TextView" />
+
+    <TextView
+        android:id="@+id/score100TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplay100TextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplay100TextView"
+        app:layout_constraintTop_toTopOf="@+id/score50TextView" />
+
+    <TextView
+        android:id="@+id/score50TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplay50TextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplay50TextView"
+        app:layout_constraintTop_toTopOf="@+id/scoreMissesTextView" />
+
+    <TextView
+        android:id="@+id/scoreMissesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplayMissesTextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplayMissesTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreDisplayMissesTextView" />
+
+    <TextView
+        android:id="@+id/scoreDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/scoreDisplay50TextView"
+        app:layout_constraintStart_toStartOf="@+id/scoreDisplay100TextView"
+        app:layout_constraintTop_toBottomOf="@+id/score100TextView" />
+
+    <ImageView
+        android:id="@+id/scoreCoverImageView"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/beatmap_cover"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_image_24" />
+
+    <TextView
+        android:id="@+id/scoreBeatmapTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/scoreCoverImageView"
+        app:layout_constraintTop_toTopOf="@+id/scoreCoverImageView" />
+
+    <TextView
+        android:id="@+id/scoreCreatorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/scoreBeatmapTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreBeatmapTextView" />
+
+    <TextView
+        android:id="@+id/scoreDifficultyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/scoreCreatorTextView"
+        app:layout_constraintTop_toBottomOf="@+id/scoreCreatorTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
