@@ -10,6 +10,7 @@ import com.squareup.moshi.Types
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import java.lang.Exception
 
 object OsuClient {
     private const val baseUrl = "https://osu.ppy.sh/api/"
@@ -35,7 +36,8 @@ object OsuClient {
         }
 
         // Fetch the JSON data from the API.
-        val data = run("${baseUrl}get_beatmaps?k=${key}&b=${beatmapId}&mods=${value}")
+        val data =
+            run("${baseUrl}get_beatmaps?k=${key}&b=${beatmapId}&mods=${value}") ?: return null
 
         // Create the adapters for creating the object from the JSON data.
         val resultType = Types.newParameterizedType(List::class.java, Beatmap::class.java)
@@ -57,7 +59,7 @@ object OsuClient {
     // API callback that fetches a list of user's top 10 best scores given a username.
     fun getUserBest(key: String, username: String): List<Score>? {
         // Fetch the JSON data from the API.
-        val data = run("${baseUrl}get_user_best?k=${key}&u=${username}")
+        val data = run("${baseUrl}get_user_best?k=${key}&u=${username}") ?: return null
 
         // Create the adapters for creating the object from the JSON data.
         val resultType = Types.newParameterizedType(List::class.java, Score::class.java)
@@ -79,7 +81,7 @@ object OsuClient {
     // API callback that fetches a user given a username.
     fun getUser(key: String, username: String): User? {
         // Fetch the JSON data from the API.
-        val data = run("${baseUrl}get_user?k=${key}&u=${username}")
+        val data = run("${baseUrl}get_user?k=${key}&u=${username}") ?: return null
 
         // Create the adapters for creating the object from the JSON data.
         val resultType = Types.newParameterizedType(List::class.java, User::class.java)
@@ -99,11 +101,19 @@ object OsuClient {
     }
 
     // Given a URL, call the API and return the body's response (JSON data).
-    private fun run(url: String): String {
+    private fun run(url: String): String? {
         val request = Request.Builder().url(url).build()
 
-        OkHttpClient().newCall(request).execute().use { response ->
-            return response.body!!.string()
+        try {
+            OkHttpClient().newCall(request).execute().use { response ->
+                return response.body!!.string()
+            }
+        } catch (e: Exception) {
+            // The user likely has no internet access (wifi off, mobile data off,
+            // airplane mode on, etc).
+            e.printStackTrace()
         }
+
+        return null
     }
 }
